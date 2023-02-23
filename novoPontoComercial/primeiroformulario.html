@@ -36,7 +36,7 @@
 				</div>
 				<div class="form-grou col-md-5">
 					<label for-"nome">Identidade</label>
-					<input type="text" name="Identidade" id="Identidade" class="form-control" placeholder="Não entre em crise existencial, é apenas seu documento">
+					<input type="text" name="Identidade" id="Identidade" class="form-control" placeholder="Não entre em crise existencial, queremos apenas seu documento">
 				</div> 
 			</div>		
 		</div>
@@ -47,32 +47,6 @@
 		</div>
 		<div class="panel-body">
 			<div class="row">
-				<div class="form-group col-md-3">
-					<label>Responsável</label>
-					<input
-	                    type="zoom"
-	                    id = "responsavel"
-	                    name="responsavel"
-	                    data-zoom="{
-	                        'displayKey':'colleagueName',
-	                        'datasetId':'colleague',
-	                        'placeholder':'Selecione o user',
-	                        'fields':[
-	                            {
-	                                'field':'colleagueId',
-	                                'label':'ID'
-	                            },{
-									'field':'colleagueName',
-									'label':'Nome',
-									'standard':'true'
-								},{
-									'field':'login',
-									'label':'Login'
-								}
-	                        ]
-	                    }"
-	                />
-				</div>
 				<div class="form-group col-md-2">
 					<label for="tipoPonto">Tipo do Ponto:</label>
 					<div class="radio">
@@ -83,13 +57,13 @@
 				<div class="form-group col-md-4">
 					<label> Dias de Funcionamento</label>
 					<div class="checkbox">
-						<label><input type="checkbox" name="segunda">Seg</label>
-						<label><input type="checkbox" name="terca">Ter</label>
-						<label><input type="checkbox" name="quarta">Qua</label>
-						<label><input type="checkbox" name="quinta">Qui</label>
-						<label><input type="checkbox" name="sexta">Sex</label>
-						<label><input type="checkbox" name="sabado">Sab</label>
-						<label><input type="checkbox" name="domingo">Dom</label>
+						<label><input type="checkbox" name="segunda">Segunda</label>
+						<label><input type="checkbox" name="terca">Terça</label>
+						<label><input type="checkbox" name="quarta">Quarta</label>
+						<label><input type="checkbox" name="quinta">Quinta</label>
+						<label><input type="checkbox" name="sexta">Sexta</label>
+						<label><input type="checkbox" name="sabado">Sábado</label>
+						<label><input type="checkbox" name="domingo">Domingo</label>
 					</div>
 				</div>
 			</div>
@@ -122,9 +96,52 @@
 			<div class="row">
 				<div class="form-group col-md-12">
 					<label for="informacoes">Informações Adcionais</label>
-					<textarea rows="5" name="informacoes" id="informacoes" class="form-control"></textarea>
+					<textarea rows="5" name="informacoes" id="informacoes" class="form-control" placeholder="Deixando aqui um espaço, porque sou gentil e pensei que talvez você quereria escrever algo"></textarea>
 				</div>
 			</div>
+		</div>
+	</div>
+	<div class="panel panel-info">
+		<div class="panel-heading">
+			<h3 class="panel-title">Responsáveis <i class="flaticon flaticon-supervisor-account icon-md" aria-hidden="true"></i></h3>
+		</div>
+		<div class="panel-body">
+			<table tablename="responsaveisTabela" class="table table-hover" addbuttonlabel="Adcionar Novo Responsável" addbuttonclass="btn btn-info">
+				<thead>
+					<tr>
+						<td>Responsáveis</td>
+					</tr>			
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<input
+	                	   		type="zoom"
+	                 	    	id = "responsavel"
+	                    		name="responsavel"
+	                    		data-zoom="{
+	                        		'displayKey':'colleagueName',
+	                        		'datasetId':'colleague',
+	                        		'placeholder':'Quem é que toma conta?',
+	                        		'fields':[
+	                            		{
+	                                		'field':'colleagueId',
+	                               			'label':'ID'
+										},{
+											'field':'colleagueName',
+											'label':'Nome',
+											'standard':'true'
+										},{
+											'field':'login',
+											'label':'Login'
+										}
+	                      		  	]
+	                    		}"
+	              			  />
+						</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 	</div>
 	<div class="panel panel-info">
