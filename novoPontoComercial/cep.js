@@ -6,5 +6,3 @@ $("#cep").blur(function() {
 		$("#estado").val(dados.uf);
 	})
 })
-
-teste
