@@ -9,9 +9,9 @@ function displayFields(form,customHTML){
 	 var cargo = form.getValue("cargo");
 	 
 	 var interacao = "<h1>Oiii, <b>"+usuario+"</b>!! Temos um novo canditade: <b>"+nome+ "</b> para o cargo de <b>"+cargo+"</b>!!<h1><br>" +
-	 "<h3>Ficou curioso, né? É só acessar o Linkedin delu:<b>" +linkedin+ "</b>Mas não esqueça de entrar em contato depois, hein?<br>" +
-	 "Para te ajudar, aqui segue o email e o celular para contato<b>" +email+"</b>,<b>" +celular+"</b>.<br>"  +
-	 "Agradecemos pela atenção, queride </h3>"
+	 "<h3>Ficou curioso, né? Então, aqui está o LinkedIn: <b>" +linkedin+ "</b>. Mas não esqueça de entrar em contato depois, hein?<br>" +
+	 "Para te ajudar, aqui segue o email: <b>" +email+"</b> e o celular para contato<b> " +celular+"</b>.<br>"  +
+	 "Agradecemos pela atenção, queride!!! </h3>"
 	 
 	 if(nome != ""){
 	 	customHTML.append('<script>$("#mensagemInteracao").append("'+interacao+'")</script>');
