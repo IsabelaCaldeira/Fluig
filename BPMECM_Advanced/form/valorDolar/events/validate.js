@@ -9,5 +9,4 @@ function validateForm(form){
     if(mensagem != ""){
         throw mensagem;
     }
-
 }
