@@ -14,6 +14,9 @@ function validateForm(form){
     if(form.getValue("linkedin") == ""){
         mensagem += "Como você espera que eu te stalkei sem o seu linkedin?"
     }
+    if(form.getValue("cargo" == "")){
+        mensagem += "Preciso saber seu cargo!"
+    }
 
     if(mensagem != ""){
         throw mensagem;

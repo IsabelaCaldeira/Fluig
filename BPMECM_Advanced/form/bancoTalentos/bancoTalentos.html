@@ -10,10 +10,11 @@
 <div class="fluig-style-guide">
 <form name="form" role="form">
     <div id="mensagemInteracao"></div>
-    <div id="principalForm">
+    <div id="formPrincipal">
         <div class="panel panel-info">
             <div class="panel-heading">
-                <h3 class="panel-title">Banco De Talentos <i class="flaticon flaticon-sentiment-very-satisfied icon-md" aria-hidden="true"></i></h3>
+                <h3 class="panel-title">Banco de Talentos!! <i class="flaticon flaticon-sentiment-very-satisfied icon-md" aria-hidden="true"></i>
+                </h3>
             </div>
             <div class="panel-body">
                 <div class="row">
@@ -21,23 +22,34 @@
                         <label for="nome">Nome Completo</label>
                         <input type="text" name="nome" id="nome" class="form-control" placeholder="Nos conte seu nome!">
                     </div>
+                    <div class="form-group col-md-3">
+                        <label for=email">Email</label>
+                        <input type="email" name="email" id="email" class="form-control" placeholder="Agora o seu email :)">
+                    </div>
                     <div class="form-grou col-md-3">
-                        <label for="celular">Celular</label>
-                        <input type="number" name="celular" id="celular" class="form-control" placeholder="E qual seu número, gatinhe?">
+                        <label for=celular">Celular</label>
+                        <input type="text" name="celular" id="celular" class="form-control" placeholder="E qual seu número, gatinhe?">
                     </div>
                 </div>
                 <div class="row">
                     <div class="form-group col-md-3">
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email" class="form-control" placeholder="Agora o seu email :)">
+                        <label for="cargo">Cargo</label>
+                        <select name="cargo" id="cargo" class="form-control">
+                            <option value="escolhaCargo">Cargo</option>
+                            <option value="desenvolvedor">Desenvolvedor</option>
+                            <option value="redator">Redator</option>
+                            <option value="seniorRH">Senior RH</option>
+                        </select>
                     </div>
                     <div class="form-group col-md-5">
-                        <label for="linkedin">Linkedin</label>
-                        <input type="text" name="linkedin" id="linkedin" class="form-control" placeholder="Deixe-me te conhecer mais">
-                    </div>
+                    <label for="linkedin">Linkedin</label>
+                    <input type="text" id="linkedin" name="linkedin" class="form-control" placeholder="Coloque a url do seu linkedin aqui ;P">
+                    </div> 
                 </div>		
             </div>
         </div>
     </div>
 </form>
+</div>
+</body>
 </html>
