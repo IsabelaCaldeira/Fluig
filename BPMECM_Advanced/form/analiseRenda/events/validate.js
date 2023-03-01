@@ -1,13 +1,11 @@
 function validateForm(form){
-
     var mensagem = "";
 
-    if(form.getValue(valorDolar) == ""){
-        mensagem += "Você esqueceu de colocar o valor do dólar!";
+    if(form.getValue("renda") == ""){
+        mensagem += "Qual a renda, queride?";
     }
 
     if(mensagem != ""){
         throw mensagem;
     }
-
 }
