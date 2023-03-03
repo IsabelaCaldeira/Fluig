@@ -535,7 +535,6 @@ function gerarAprovadores(){
 	}
 	
 	
-	//=====================================================
 	//PREENCHENDO OS CAMPOS COM OS APROVADORES
 	//$("#USERVALIDADOR").val( userCustos );
 	$("#USERCOORDCORP").val( userCC );
