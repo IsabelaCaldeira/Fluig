@@ -8,13 +8,13 @@ function validateForm(form){
         mensagem += "Acho que você esqueceu do email";
     }
     if(form.getValue("celular") == "" || "renda" == null){
-        mensagem += "Acho que você esqueceu do email";
+        mensagem += "E seu número de telefone que você esqueceu de me passar?";
     }
     if(form.getValue("cargo") == "" || "renda" == null){
-        mensagem += "Acho que você esqueceu do email";
+        mensagem += "Conta para mim o que você quer ser";
     }
     if(form.getValue("linkedin") == "" || "renda" == null){
-        mensagem += "Acho que você esqueceu do email";
+        mensagem += "Não tem como eu te achar sem seu linkedin, meu ser de luz";
     }
     if(mensagem != ""){
         throw mensagem;
