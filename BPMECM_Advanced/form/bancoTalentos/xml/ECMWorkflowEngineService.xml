@@ -1,0 +1,35 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.workflow.ecm.technology.totvs.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:simpleStartProcess>
+         <username>fluig.academy</username>
+         <password>fluig.academy</password>
+         <companyId>1</companyId>
+         <processId>avaliarCandidato</processId>
+         <comments>?</comments>
+         
+         <cardData>
+            <item>
+               <item>nome</item>
+               <item>Isabela</item>
+            </item>
+            <item>
+               <item>email</item>
+               <item>isabela.ribeiro@outlook.com</item>
+            </item>
+            <item>
+               <item>celular</item>
+               <item>12321321</item>
+            </item>
+		  <item>
+                <item>cargo</item>
+                <item>desenvolvedor</item>
+             </item>
+             <item>
+                <item>linkedin</item>
+                <item>linkedin.com/developerisa</item>
+             </item>
+         </cardData>
+      </ws:simpleStartProcess>
+   </soapenv:Body>
+</soapenv:Envelope>
