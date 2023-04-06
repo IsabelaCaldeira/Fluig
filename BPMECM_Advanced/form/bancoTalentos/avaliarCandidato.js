@@ -16,3 +16,13 @@ xml.find("[name=email]").text($("email").val());
 xml.find("[name=celular]").text($("celular").val());
 xml.find("[name=cargo]").text($("cargo").val());
 xml.find("[name=linkedin]").text($("linkedin").val());
+
+parent.WCMAPI.Create({
+    url: "/webdesk/ECMWorkflowEngineService?wsdl",
+    contentType: "text/xml",
+    dataType: "xml",
+    data: xml[0],
+    sucess: function(data){
+        console.log("Processo Iniciado");
+    }
+})
