@@ -1,4 +1,4 @@
-$("criarUsuario").click(function(){
+$("#criarUsuario").click(function(){
     var c1 = DatasetFactory.createConstraint("colleagueId", $("#login").val(),$("#login").val(),  ConstraintType.MUST);
     var c2 = DatasetFactory.createConstraint("colleagueName", $("#nome").val(),$("#nome").val(), ConstraintType.MUST);
     var c3 = DatasetFactory.createConstraint("login", $("#login").val(),$("#login").val(),  ConstraintType.MUST);
