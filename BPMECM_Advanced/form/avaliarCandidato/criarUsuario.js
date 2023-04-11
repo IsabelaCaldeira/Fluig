@@ -15,4 +15,25 @@ $("#criarUsuario").click(function(){
     });
 });
 
+$("#adcionarAComunidade").click(function(){
+       
+    var dados = {   "communityAlias" : "oEEE",
+                    "userAliases" : [$("#login").val()]
+                };
+    
+    $.ajax({
 
+        data: JSON.stringify(dados), 
+        dataType: 'json',
+        url: 'https://lab.fluig.com/api/json_AddUserToCommunityVO.html',
+        type: 'POST',
+        contentType: 'application/json',
+        sucess: function(result){
+            FLUIGC.toast({
+                message: $("#nome").val()+'foi adcionado com sucesso na comunidade!!!',
+                type: 'info'                
+            });
+        }
+
+    });
+});
