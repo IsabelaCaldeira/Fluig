@@ -24,7 +24,11 @@ $("#avaliarCandidato").click(function(){
         dataType: "xml",
         data: xml[0],
         sucess: function(data){
-            console.log("Processo Iniciado");
+            FLUIGC.toast({
+                title: 'Processo Iniciado!',
+                message: 'Continue a Avaliação de nosso queride' + $("#nome").val()+'.',
+                type: 'info'                
+            })
         }
     });
 });
