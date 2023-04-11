@@ -8,6 +8,11 @@ $("#criarUsuario").click(function(){
     var constraints = new Array(c1,c2,c3,c4,c5);
 
     DatasetFactory.getDataset("criaUser", null, constraints, null);
-})
+
+    FLUIGC.toast({
+        message: 'Login para' + $("#nome").val()+'criado com sucesso!!!',
+        type: 'info'                
+    });
+});
 
 
