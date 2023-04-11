@@ -23,7 +23,18 @@ function onSync(lastSyncDate){
     fields.push('B1_DESC');
     fields.push('B1_UM');
 
-    var resultadoProtheus = DatasetFactory.getDataset("");
+    var resultadoProtheus = DatasetFactory.getDataset("ds_consultaCFGTABLE", fields, null, null);
+
+    for (var i = 0; i < resultadoProtheus.rowsCount; i++) {
+        var B1_COD = resultadoProtheus.getValue(i, "B1_COD");
+        var B1_DESC = resultadoProtheus.getValue(i, "B1_DESC");
+        var B1_UM = resultadoProtheus.getValue(i, "B1_UM");
+
+        dataset.addOrUpdateRow([B1_COD, B1_DESC, B1_UM]);
+
+    }
+
+    return dataset;
 
 }
 function createDataset(fields, constraint, sortFields) {
