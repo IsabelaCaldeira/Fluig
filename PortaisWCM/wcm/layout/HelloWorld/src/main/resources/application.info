@@ -1,0 +1,17 @@
+application.type=layout
+application.code=HelloWorld
+application.title=HelloWorld
+application.description=O layout trail 
+application.category=SYSTEM
+application.renderer=freemarker
+developer.code=JAGUARNTBAL096
+developer.name=isabela.caldeira
+developer.url=http://www.fluig.com
+layout.defaultSlot=SlotA
+layout.file=layout.ftl
+locale.file.base.name=HelloWorld
+slot.SlotGlobalAlert=alertpopover
+slot.SlotInstantSearch=suggestsearch
+slot.SlotLogin=sociallogin
+slot.SlotMenu=menu
+slot.SlotUsePolicy=usepolicy
