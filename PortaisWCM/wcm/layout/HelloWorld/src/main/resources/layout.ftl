@@ -36,7 +36,6 @@
                 </div>
             </div>
             </body>
-
             <@wcm.footer layoutuserlabel="wcm.layoutdefault.user" />
         </div>
     </div>
