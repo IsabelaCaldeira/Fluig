@@ -31,7 +31,6 @@ function onSync(lastSyncDate){
         var B1_UM = resultadoProtheus.getValue(i, "B1_UM");
 
         dataset.addOrUpdateRow([B1_COD, B1_DESC, B1_UM]);
-
     }
 
     return dataset;
