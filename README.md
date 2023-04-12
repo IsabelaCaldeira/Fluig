@@ -6,9 +6,6 @@ Neste repositório você irá encontrar todos os exemplos e exercícios utilizad
 
 # Fluig Dev Start
 
-
-
-
 ### Recursos úteis
 
 * Boas práticas em desenvolvimento web
