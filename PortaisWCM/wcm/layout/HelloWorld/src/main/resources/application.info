@@ -1,7 +1,7 @@
 application.type=layout
 application.code=HelloWorld
 application.title=HelloWorld
-application.description=O layout trail 
+application.description=O layout trail e agora mexendo no application 
 application.category=SYSTEM
 application.renderer=freemarker
 developer.code=JAGUARNTBAL096
