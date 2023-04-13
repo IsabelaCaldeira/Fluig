@@ -8,7 +8,6 @@
     <!-- Wrapper -->
     <div class="wcm-all-content">
         <div id="wcm-content" class="clearfix wcm-background">
-
             <!-- Your content here -->
             <body>
                 <div class= "fluig-style-guide">
@@ -26,7 +25,6 @@
                                 <h2>Não se preocupe</h2>
                                 <p>O restaurante já está fazendo</p>
                             </div>
-                        
                             <div class="cmd-xs-6 col-lg-4">
                                 <h2>Não se preocupe</h2>
                                 <p>Ninguém aqui vai morrer de fome</p>
