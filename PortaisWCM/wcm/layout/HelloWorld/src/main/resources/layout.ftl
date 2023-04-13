@@ -19,15 +19,21 @@
                         <div class="row">
                             <div class="cmd-xs-6 col-lg-4">
                                 <h2>Não se preocupe</h2>
-                                <p>Eu já pedi a comida</p>
+                                <div class="editable-slot slotfull layout-1-1" id="slotContainer001">
+                                    <#wcm.renderSlot id="Slot001" decorator="true" editableSlot="true" />
+                                </div>
                             </div>
                             <div class="cmd-xs-6 col-lg-4">
                                 <h2>Não se preocupe</h2>
-                                <p>O restaurante já está fazendo</p>
+                                <div class="editable-slot slotfull layout-1-1" id="slotContainer002">
+                                    <#wcm.renderSlot id="Slot002" decorator="false" editableSlot="true" />
+                                </div>
                             </div>
                             <div class="cmd-xs-6 col-lg-4">
                                 <h2>Não se preocupe</h2>
-                                <p>Ninguém aqui vai morrer de fome</p>
+                               <div class="editable-slot slotfull layout-1-1" id="slotContainer003">
+                                    <#wcm.renderSlot id="Slot003" decorator="false" editableSlot="true" />
+                                </div>
                             </div>
                         </div>
                     </div>
