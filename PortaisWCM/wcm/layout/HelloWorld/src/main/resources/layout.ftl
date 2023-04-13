@@ -17,22 +17,10 @@
                             <p>Que fome</p>
                         </div>
                         <div class="row">
-                            <div class="cmd-xs-6 col-lg-4">
+                            <div class="cmd-xs-6 col-lg-12">
                                 <h2>Não se preocupe</h2>
                                 <div class="editable-slot slotfull layout-1-1" id="slotContainer001">
                                     <#wcm.renderSlot id="Slot001" decorator="true" editableSlot="true" />
-                                </div>
-                            </div>
-                            <div class="cmd-xs-6 col-lg-4">
-                                <h2>Não se preocupe</h2>
-                                <div class="editable-slot slotfull layout-1-1" id="slotContainer002">
-                                    <#wcm.renderSlot id="Slot002" decorator="false" editableSlot="true" />
-                                </div>
-                            </div>
-                            <div class="cmd-xs-6 col-lg-4">
-                                <h2>Não se preocupe</h2>
-                               <div class="editable-slot slotfull layout-1-1" id="slotContainer003">
-                                    <#wcm.renderSlot id="Slot003" decorator="false" editableSlot="true" />
                                 </div>
                             </div>
                         </div>
