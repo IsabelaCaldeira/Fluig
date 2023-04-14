@@ -14,4 +14,3 @@ edit.file=edit.ftl
 locale.file.base.name=graphic
 application.resource.js.1=/resources/js/graphic.js
 application.resource.css.2=/resources/css/graphic.css
-application.resource.component.1=fluigchart

@@ -16,4 +16,3 @@ locale.file.base.name=SelecaoCor
 application.resource.js.1=/resources/js/SelecaoCor.js
 application.resource.css.2=/resources/css/SelecaoCor.css
 application.resource.component.1=fluigcolorpicker
-
