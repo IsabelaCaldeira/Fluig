@@ -7,15 +7,15 @@ function onSync(lastSyncDate) {
 
 function createDataset(fields, constraints, sortFields) {
 
-	var usuario = "mestre";    
-    var senha = "integracao";    
+	var usuario = "isabela.caldeira";    
+    var senha = "";    
     //importante passar no contexto o mesmo código de usuário usado para logar no webservice    
           
           
           
     var context = "CodUsuario=mestre;CodSistema=F;CodColigada=1"    
     //o filtro pode ser qualquer campo da visão, por exemplo CODCOLIGADA=1 AND CODFILIAL = 1    
-    var filtro = "1=1" ;    
+    var filtro = "SEXUALIDADE != 'HETERO'" ;    
     /* Fim Prepararação das variaveis */    
   
     var retorno = dcReadView("RhuEntidadesData", context, usuario, senha, filtro)    
@@ -37,10 +37,9 @@ function createDataset(fields, constraints, sortFields) {
              xmlResultados.VEntidades[i].CODENTIDADE.toString(),   
              xmlResultados.VEntidades[i].RAZAOSOCIAL.toString(),   
              xmlResultados.VEntidades[i].NOMEFANTASIA.toString()   
-                                    ))}   
+            ))
+	}   
   
-  
-    // retorna...  
     return dataset;
 	
 }  
