@@ -11,6 +11,42 @@ function createDataset(fields, constraints, sortFields) {
 }
 
 
+function GetXml()  
+{  
+    return "<RhuEntidades>" +   
+"  <VEntidades>" +   
+"    <CODENTIDADE>0000000000000000</CODENTIDADE>" +   
+"    <RAZAOSOCIAL>Laboratório São Jorge</RAZAOSOCIAL>" +   
+"    <NOMEFANTASIA>Laboratório São Jorge</NOMEFANTASIA>" +   
+"    <NUMTELEFONE1>429-5530</NUMTELEFONE1>" +   
+"    <NUMTELEFONE2>429-5540</NUMTELEFONE2>" +   
+"    <CODAREAATUACAO>00003</CODAREAATUACAO>" +   
+"    <LOGRADOURO>Rua dos Artesãos</LOGRADOURO>" +   
+"    <NUMERO>8889</NUMERO>" +   
+"    <BAIRRO>Aleijadinho</BAIRRO>" +   
+"    <ESTADO>MG</ESTADO>" +   
+"    <CEP>30000</CEP>" +   
+"    <PAIS>Brasil</PAIS>" +   
+"    <FAX>429-5550</FAX>" +   
+"    <CONTATO>Padre José</CONTATO>" +   
+"    <OBS>Usado para a conversão do RM Labore.</OBS>" +   
+"    <EMAIL>Labsaojorge@ig.com.br</EMAIL>" +   
+"    <TIPOENTIDADE>1</TIPOENTIDADE>" +   
+"    <MINISTRATREIN>0</MINISTRATREIN>" +   
+"    <CODGRUPOENTIDADE>00009</CODGRUPOENTIDADE>" +   
+"    <INATIVA>0</INATIVA>" +   
+"    <ENTCURRICULAR>1</ENTCURRICULAR>" +   
+"    <EXIBEINTERNET>0</EXIBEINTERNET>" +   
+"    <EXIBEACADEMICO>0</EXIBEACADEMICO>" +   
+"    <EXIBEPROFISSIONAL>1</EXIBEPROFISSIONAL>" +   
+"  </VEntidades>" +   
+"  <VEntidadesCompl>" +   
+"    <CODENTIDADE>0000000000000000</CODENTIDADE>" +   
+"  </VEntidadesCompl>" +   
+"</RhuEntidades>";  
+      
+}  
+
 /**'
 * A API de autenticação da Totvs baseia no "Basic access authentication" do HTTP.
  * Código Java para autenticação 
