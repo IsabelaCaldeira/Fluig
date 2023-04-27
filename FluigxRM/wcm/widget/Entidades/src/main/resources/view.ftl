@@ -17,4 +17,4 @@
         <button type="button" class="btn btn-default" data-show-message>Enviar</button>
     </div>
 </div>
-
+<script src="/webdesk/vsXMLRPC.js"></script>
