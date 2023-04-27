@@ -13,5 +13,8 @@
         <input type="text" name="codEntidade" id="codEntidade" class="form-control">
     </div>
 
+    <div>
+        <button type="button" class="btn btn-default" data-show-message>Enviar</button>
+    </div>
 </div>
 
