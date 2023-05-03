@@ -1,22 +1,24 @@
-var MyWidget = SuperWidget.extend({
-    //variáveis da widget
-    variavelNumerica: null,
-    variavelCaracter: null,
+var HelloWorld = SuperWidget.extend({
+    message: null,
 
-    //método iniciado quando a widget é carregada
-    init: function() {
+    init: function () {
+        //code
     },
-  
-    //BIND de eventos
+
     bindings: {
         local: {
-            'execute': ['click_executeAction']
-        },
-        global: {}
+            'show-message': ['click_showMessage']
+        }
     },
- 
-    executeAction: function(htmlElement, event) {
+
+    showMessage: function () {
+    	
+    	var c1 = DatasetFactory.createConstraint("CODENTIDADE", $("#codEntidade").val(), $("#codEntidade").val(), ConstraintType.MUST);
+    	var c2 = DatasetFactory.createConstraint("RAZAOSOCIAL", $("#razaoSocial").val(), $("#razaoSocial").val(), ConstraintType.MUST);
+    	var c3 = DatasetFactory.createConstraint("NOMEFANTASIA", $("#nomeFantasia").val(), $("#nomeFantasia").val(), ConstraintType.MUST);
+    	
+    	var constraints = new Array(c1, c2, c3);
+    	
+        DatasetFactory.getDataset("dsInsereEntidades", null, constraints, null);
     }
-
 });
-
