@@ -5,7 +5,72 @@ function onSync(lastSyncDate) {
 
 }
 function createDataset(fields, constraints, sortFields) {
+	
+	var dataset = DatasetBuilder.newDataset();
 
+	var NOME_DATASERVER = "RhuEntidadesData";  
+	  
+    /* Prepararação das variaveis */  
+      //usuário e senha do aplicativo RM. O mesmo utilizado para logar no sistema e que tenha permissão de   
+      //acesso ao cadastro que deseja utilizar  
+      var usuario = "mestre";  
+      var senha = "integracao";  
+      //importante passar no contexto o mesmo código de usuário usado para logar no webservice  
+      var context = "CodUsuario=mestre;CodSistema=F;CodColigada=1"  
+    /* Fim Prepararação das variaveis */  
+        
+  
+    try{  
+          
+        var primaryKey = "01";  
+  
+        // carrega o webservice...  
+        var authService = getWebService(usuario, senha);  
+        // define o contexto...  
+        var context = "CodUsuario=mestre;CodSistema=F;CodColigada=1"  
+        // faz a leitura...  
+        var text = new String(authService.readRecord(NOME_DATASERVER, primaryKey, context));  
+  
+        if (!ChekExist(text))  
+            text = GetXml();  
+  
+        var CODENTIDADE = "";
+        var RAZAOSOCIAL = "";
+        var NOMEFANTASIA = "";
+        
+        
+        for (var i in constraints) {
+        	if(constraints[i]['fieldName'] == "CODENTIDADE") {
+        		CODENTIDADE = constraints[i]['finalValue'];
+        	}
+        	else if(constraints[i]['fieldName'] == "RAZAOSOCIAL") {
+        		RAZAOSOCIAL = constraints[i]['finalValue'];
+        	}
+        	else if(constraints[i]['fieldName'] == "NOMEFANTASIA") {
+        		NOMEFANTASIA = constraints[i]['finalValue'];
+        	}
+        }
+        
+        
+        text = replaceValue(text, "CODENTIDADE" , CODENTIDADE);   
+        text = replaceValue(text, "RAZAOSOCIAL" , RAZAOSOCIAL);   
+        text = replaceValue(text, "NOMEFANTASIA" , NOMEFANTASIA);   
+  
+  
+        var result = new String(authService.saveRecord(NOME_DATASERVER, text, context));   
+          
+    // se retornou a chave, salvou ok...  
+        checkIsPK(result, 1);  
+    }  
+    catch (e)   
+    {  
+        if (e == null)  e = "Erro desconhecido!";  
+        var mensagemErro = "Ocorreu um erro ao salvar dados no RM: " + e;  
+        throw mensagemErro;  
+    }
+	
+    
+    return dataset;
 }
 function onMobileSync(user) {
 
@@ -46,6 +111,7 @@ function GetXml()
 "</RhuEntidades>";  
       
 }  
+
 
 /**'
 * A API de autenticação da Totvs baseia no "Basic access authentication" do HTTP.
@@ -226,4 +292,71 @@ function getFormattedValue(value, isLike){
 	else{
 	  return "'" + value + "'";
 	}
+}
+
+
+
+function getXMLFromString(xmlString) {
+	var factory = javax.xml.parsers.DocumentBuilderFactory.newInstance();
+	var parser = factory.newDocumentBuilder();
+	var is = new org.xml.sax.InputSource();
+    is.setCharacterStream(new java.io.StringReader(xmlString));
+	return parser.parse(is);
+}
+
+ 
+ function abrirPesquisa(DATASET_ID, dataFields, resultFields, type, title){	
+	window.open("/webdesk/zoom.jsp" +
+	"?datasetId=" +
+	DATASET_ID +
+	"&dataFields=" +
+	dataFields +
+	"&resultFields=" +
+	resultFields +
+	"&type=" +
+	type+
+	"&title=" +
+	title 	
+	, "zoom", "status,scroolbars=no,width=600,height=350,top=0,left=0");
+}
+
+function checkIsPK(result, qtd){
+	var lines = result.split('\r');
+	
+	if(lines.length == 1){
+		var pk = result.split(';');
+		if(pk.length == qtd)
+			return;
+	}
+		throw result;
+	
+}
+
+ function ChekExist(result)
+ {
+	 var lines = result.split('\r');
+	if(lines.length > 1)
+		return true
+	else
+		return false;
+ }
+ 
+
+function replaceValue(text, columnName, newValue){
+
+	
+	if ((newValue != null) && (newValue.trim() != ""))
+	{
+		var regex = new RegExp("<" + columnName + ">(.*?)<\\/" + columnName + ">", "g");
+		var replaceText = "<" + columnName + ">" + newValue + "</" + columnName + ">";
+		
+		return text.replace(regex, replaceText);
+	}
+	else
+		return text;
+}
+
+
+function isEmpty(str) {
+    return (!str || 0 === str.length);
 }
